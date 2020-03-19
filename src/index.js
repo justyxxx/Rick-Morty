@@ -24,6 +24,8 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
 );
 
+window.store = store;
+
 sagaMiddleware.run(watchList);
 
 const app = (
