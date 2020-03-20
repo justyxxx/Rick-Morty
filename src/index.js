@@ -5,17 +5,16 @@ import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import listReducer from './store/reducers/list';
 import {watchList} from './store/sagas';
 
-let composeEnhancers = null;
-if (process.env.NODE_ENV === 'development') {
-    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-} else {
-    composeEnhancers = compose;
-}
+const composeEnhancers = composeWithDevTools({
+  trace: true,
+  traceLimit: 25,
+})
 
 const rootReducer = combineReducers({listReducer});
 const sagaMiddleware = createSagaMiddleware();

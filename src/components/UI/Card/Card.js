@@ -13,9 +13,9 @@ class CardComp extends React.Component {
                 >
               <Meta 
                 avatar={
-                  <Avatar  shape="square" size={74} src={this.props.img} />
+                  <Avatar  shape="square" size={100} src={this.props.img} />
                 }
-                title="Show details"         
+                title="Подробнее"         
                 description={this.props.switch}
               />              
             </Card>
