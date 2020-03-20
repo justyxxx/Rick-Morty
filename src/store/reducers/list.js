@@ -2,7 +2,8 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     isLoading: false,
-    error: false,
+		error: false,
+		loaded: false,
     info: {},
     results: []
 };
@@ -16,7 +17,8 @@ const listInit = (state, action) => {
 const listSuccess = (state, action) => {
     return {
         ...state,
-        isLoading: false,
+				isLoading: false,
+				loaded: true,
         info: action.data.info,
         results: action.data.results
     }

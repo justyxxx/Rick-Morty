@@ -1,11 +1,11 @@
 import { put } from "redux-saga/effects";
-import axios from "../../axios-rick-morty";
+import instance from "../../axios-rick-morty";
 import * as actions from "../actions";
 
 export function* listProcessSaga(action) {
     yield put(actions.listInit());
     try {
-        const response = yield axios.get(action.page);
+        const response = yield instance.get(action.page);
         yield put(actions.listSuccess(response.data))
     }
     catch(error) {
