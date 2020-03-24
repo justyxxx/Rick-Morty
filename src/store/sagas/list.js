@@ -9,7 +9,7 @@ export function* listProcessSaga(action) {
         yield put(actions.listSuccess(response.data))
     }
     catch(error) {
-        yield put(actions.listFail(error));
+        yield put(actions.listFail(error.message));
     }
 }
 export function* autoInitListSaga() {
