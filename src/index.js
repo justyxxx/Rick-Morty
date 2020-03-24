@@ -9,6 +9,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import listReducer from './store/reducers/list';
+import localeReducer from './store/reducers/locale';
 import {watchList} from './store/sagas';
 
 const composeEnhancers = composeWithDevTools({
@@ -19,7 +20,8 @@ const composeEnhancers = composeWithDevTools({
 const rootReducer = combineReducers({listReducer});
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
-  rootReducer,
+	rootReducer,
+	localeReducer,
   composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
 );
 
