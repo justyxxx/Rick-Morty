@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../store/actions';
 import classes from './App.css';
-import CharacterContext from '../context/character-context';
+import AppContext from '../context/app-context';
 import Spinner from '../components/UI/Spinner/Spinner';
 import Layout from '../hoc/Layout/Layout';
 
@@ -14,17 +14,28 @@ const App = props => {
     // eslint-disable-next-line
   }, []);
 
+  const [currentPage, setCurrentPage] = useState(1);
   const [characterId, setCharacterId] = useState(1);
+  
   const setId = (id) => {
     setCharacterId(id)
-  }
+  };
+
+  const setPage = (page) => {
+    setCurrentPage(page)
+  };
 
   return (
     <div className={classes.App} >
       {props.isLoading ? <Spinner /> : 
-      <CharacterContext.Provider value={{characterId, setCharacterId: setId}}>
+      <AppContext.Provider value={{
+        characterId,
+        setCharacterId: setId,
+        currentPage,
+        setCurrentPage: setPage
+        }}>
         <Layout />
-      </CharacterContext.Provider>
+      </AppContext.Provider>
       }
     </div>
   );

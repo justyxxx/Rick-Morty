@@ -2,11 +2,11 @@ import React, {useContext} from 'react';
 import {connect} from 'react-redux';
 import Card from '../../components/UI/Card/Card';
 import {Switch} from 'antd';
-import CharacterContext from '../../context/character-context';
+import AppContext from '../../context/app-context';
 
 const ListBuilder = props => {
 
-		const {characterId, setCharacterId} = useContext(CharacterContext);
+		const {characterId, setCharacterId} = useContext(AppContext);
 		const showDetails = (val) => {        
 			val = Number(val);        
 			val === characterId ? setCharacterId(null) : setCharacterId(val)

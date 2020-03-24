@@ -17,11 +17,10 @@ const composeEnhancers = composeWithDevTools({
   traceLimit: 25,
 })
 
-const rootReducer = combineReducers({listReducer});
+const rootReducer = combineReducers({listReducer, localeReducer});
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
 	rootReducer,
-	localeReducer,
   composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
 );
 
