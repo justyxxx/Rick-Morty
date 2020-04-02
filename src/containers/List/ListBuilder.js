@@ -4,7 +4,7 @@ import Card from '../../components/UI/Card/Card';
 import {Switch} from 'antd';
 import AppContext from '../../context/app-context';
 
-const ListBuilder = props => {
+export const ListBuilder = props => {
 
 		const {characterId, setCharacterId} = useContext(AppContext);
 		const showDetails = (val) => {        

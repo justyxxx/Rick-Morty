@@ -10,7 +10,7 @@
 
 .List::-webkit-scrollbar
 {
-width: 5px;
+width: 7px;
 background-color: bisque;
 }
 
@@ -18,4 +18,15 @@ background-color: bisque;
 	background-color: bisque;
 	padding: 0.3rem;
 	border-radius: 4px;
+}
+
+.List::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: bisque;
+}
+.List::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background-color: rgba(161, 86, 51, 0.3)	
 }
