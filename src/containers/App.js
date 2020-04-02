@@ -34,7 +34,7 @@ const App = props => {
         currentPage,
         setCurrentPage: setPage
         }}>
-        <Layout />
+        <Layout locale={props.locale}/>
       </AppContext.Provider>
       }
     </div>
@@ -43,7 +43,8 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
-    isLoading: state.listReducer.isLoading
+    isLoading: state.listReducer.isLoading,
+    locale: state.localeReducer.locale
   }
 };
 

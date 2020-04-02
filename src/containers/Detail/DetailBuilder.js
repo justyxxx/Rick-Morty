@@ -15,13 +15,15 @@ export const DetailBuilder = props => {
         species={character.species}
         location={character.location.name}
         gender={character.gender}
+        locale={props.locale}
         />
     )
 };
 const mapStateToprops = state => {
     return {
         characters : state.listReducer.results,
-        loaded: state.listReducer.loaded
+        loaded: state.listReducer.loaded,
+        locale: state.localeReducer.locale
     }
 };
 export default connect(mapStateToprops)(DetailBuilder)

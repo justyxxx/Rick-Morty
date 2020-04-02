@@ -25,6 +25,7 @@ export const ListBuilder = props => {
                         onChange={(checked, event) => showDetails(event.target.id)}
                     />
                 }
+                locale={props.locale}
             />
         </li>
     });
@@ -38,7 +39,8 @@ export const ListBuilder = props => {
 
 const mapStateToProps = state => {
     return {
-        characters: state.listReducer.results
+        characters: state.listReducer.results,
+        locale: state.localeReducer.locale
     }
 };
 export default connect(mapStateToProps)(ListBuilder)
