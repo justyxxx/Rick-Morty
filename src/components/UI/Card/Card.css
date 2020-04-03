@@ -1,31 +1,29 @@
+
 .Card {
-  width: 300px;
+	width: 300px;
 }
 .Cover {
-  display: none !important;
+	display: none !important;
 }
 @media (max-width: 992px) {
-  .Card {
-    width: 96%!important;
-    margin: 0.8rem 2% !important;
-  }
-  .Avatar {
-    width: 120px !important;
-    height: 120px !important;
-  }
+	.Card {
+			width: 96%;
+			margin: 0.8rem 2% !important;
+	}
+	.Avatar {
+			width: 120px !important;
+			height: 120px !important;
+	}
 }
 @media (max-width: 500px) {
-  .Meta {
-    display: block;
-    float: none;
-  }
-  .Avatar {
-    display: none;
-  }
-  .Cover {
-    display: block !important;
-    margin: 0.5rem auto !important;
-    width: 110px !important;
-    height: 110px !important;
-  }
+	.Avatar {
+			display: none !important;
+	}
+	.Cover {
+			display: block !important;
+			margin: 0.5rem auto !important;
+			width: 110px !important;
+			height: 110px !important;
+			float: none;
+	}
 }
