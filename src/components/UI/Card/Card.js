@@ -1,14 +1,17 @@
 import React from "react";
 import { Card, Avatar } from "antd";
-import classes from './Card.css';
+import classes from "./Card.css";
 import { getLocale } from "../../../utils/localization";
 const { Meta } = Card;
+const env = process.env.NODE_ENV === "development";
 
 export class CardComp extends React.Component {
   render() {
+    const maxWidth = window.innerWidth >= 992;
     return (
       <Card
-        style={{ width: 300, marginTop: 6 }}
+        className={classes.Card}
+        style={!env && maxWidth ? { margin: "0.6rem 2.5rem 0 3rem" } : null}
         bodyStyle={{ padding: 10 }}
         cover={
           <Avatar
@@ -18,7 +21,7 @@ export class CardComp extends React.Component {
             className={classes.Cover}
           />
         }
-        >
+      >
         <Meta
           avatar={
             <Avatar
