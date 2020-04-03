@@ -4,8 +4,13 @@ import AppContext from '../../context/app-context';
 import Detail from '../../components/Detail/Detail';
 
 export const DetailBuilder = props => {
-    const {characterId} = useContext(AppContext);
+    const {characterId, setCharacterId, showDrawer, setShowDrawer} = useContext(AppContext);
     const character = props.characters.find(character => character.id === characterId);
+    const onCloseDrawer = () => {        
+        setShowDrawer(false);
+        setCharacterId(null);
+
+    }
 
     return (
         !characterId || !props.loaded ? <Detail /> :
@@ -16,6 +21,8 @@ export const DetailBuilder = props => {
         location={character.location.name}
         gender={character.gender}
         locale={props.locale}
+        onClose={onCloseDrawer}
+        showDrawer={showDrawer}
         />
     )
 };

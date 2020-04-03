@@ -8,22 +8,26 @@ import Layout from '../hoc/Layout/Layout';
 
 export const App = props => {
 
+  
+
   useEffect(()=> {
     props.autoInitListHandler()
     console.log(props)
     // eslint-disable-next-line
   }, []);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [characterId, setCharacterId] = useState(1);
-  
-  const setId = (id) => {
-    setCharacterId(id)
-  };
+  const ScreenWidth = window.innerWidth;
+  let startId = 1;
 
-  const setPage = (page) => {
-    setCurrentPage(page)
-  };
+  if(ScreenWidth <= 992) startId = null;
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [characterId, setCharacterId] = useState(startId);
+  const [showDrawer, setShowDrawer] = useState(false)
+  
+  const setId = (id) => setCharacterId(id);
+  const setPage = (page) => setCurrentPage(page);
+  const setDrawer = (val) => setShowDrawer(val);
 
   return (
     <div className={classes.App} >
@@ -32,7 +36,9 @@ export const App = props => {
         characterId,
         setCharacterId: setId,
         currentPage,
-        setCurrentPage: setPage
+        setCurrentPage: setPage,
+        showDrawer,
+        setShowDrawer: setDrawer
         }}>
         <Layout locale={props.locale}/>
       </AppContext.Provider>

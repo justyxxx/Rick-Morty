@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {connect} from 'react-redux';
 import Card from '../../components/UI/Card/Card';
 import {Switch} from 'antd';
@@ -6,9 +6,15 @@ import AppContext from '../../context/app-context';
 
 export const ListBuilder = props => {
 
-		const {characterId, setCharacterId} = useContext(AppContext);
+    const {characterId, setCharacterId, setShowDrawer} = useContext(AppContext);    
+    const ScreenWidth = window.innerWidth;
 		const showDetails = (val) => {        
-			val = Number(val);        
+            val = Number(val);
+            if (ScreenWidth < 992) {
+                setCharacterId(val);
+                setShowDrawer(true)
+                return
+               }        
 			val === characterId ? setCharacterId(null) : setCharacterId(val)
 	};    
 
@@ -31,7 +37,7 @@ export const ListBuilder = props => {
     });
 
     return(
-        <ul style={{listStyle: 'none', padding: 0}}>
+        <ul style={{listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column'}}>
             {avatarsArr}
         </ul>
     )
