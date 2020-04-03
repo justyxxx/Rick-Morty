@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rick-morty/static/css/main.b7a327f1.chunk.css",
+    "main.js": "/rick-morty/static/js/main.8ccd4d96.chunk.js",
+    "main.js.map": "/rick-morty/static/js/main.8ccd4d96.chunk.js.map",
+    "runtime~main.js": "/rick-morty/static/js/runtime~main.6bffb73a.js",
+    "runtime~main.js.map": "/rick-morty/static/js/runtime~main.6bffb73a.js.map",
+    "static/js/2.2cff1daa.chunk.js": "/rick-morty/static/js/2.2cff1daa.chunk.js",
+    "static/js/2.2cff1daa.chunk.js.map": "/rick-morty/static/js/2.2cff1daa.chunk.js.map",
+    "index.html": "/rick-morty/index.html",
+    "precache-manifest.f76f55f8ca7cc14fc5b4758c25be6205.js": "/rick-morty/precache-manifest.f76f55f8ca7cc14fc5b4758c25be6205.js",
+    "service-worker.js": "/rick-morty/service-worker.js",
+    "static/css/main.b7a327f1.chunk.css.map": "/rick-morty/static/css/main.b7a327f1.chunk.css.map"
+  }
+}
