@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rick-morty/static/css/main.b7a327f1.chunk.css",
-    "main.js": "/rick-morty/static/js/main.8ccd4d96.chunk.js",
-    "main.js.map": "/rick-morty/static/js/main.8ccd4d96.chunk.js.map",
-    "runtime~main.js": "/rick-morty/static/js/runtime~main.6bffb73a.js",
-    "runtime~main.js.map": "/rick-morty/static/js/runtime~main.6bffb73a.js.map",
-    "static/js/2.2cff1daa.chunk.js": "/rick-morty/static/js/2.2cff1daa.chunk.js",
-    "static/js/2.2cff1daa.chunk.js.map": "/rick-morty/static/js/2.2cff1daa.chunk.js.map",
-    "index.html": "/rick-morty/index.html",
-    "precache-manifest.f76f55f8ca7cc14fc5b4758c25be6205.js": "/rick-morty/precache-manifest.f76f55f8ca7cc14fc5b4758c25be6205.js",
-    "service-worker.js": "/rick-morty/service-worker.js",
-    "static/css/main.b7a327f1.chunk.css.map": "/rick-morty/static/css/main.b7a327f1.chunk.css.map"
+    "main.css": "/Rick-Morty/static/css/main.24f31acb.chunk.css",
+    "main.js": "/Rick-Morty/static/js/main.ce3c2801.chunk.js",
+    "main.js.map": "/Rick-Morty/static/js/main.ce3c2801.chunk.js.map",
+    "runtime~main.js": "/Rick-Morty/static/js/runtime~main.4d03f7f6.js",
+    "runtime~main.js.map": "/Rick-Morty/static/js/runtime~main.4d03f7f6.js.map",
+    "static/js/2.4bb433bf.chunk.js": "/Rick-Morty/static/js/2.4bb433bf.chunk.js",
+    "static/js/2.4bb433bf.chunk.js.map": "/Rick-Morty/static/js/2.4bb433bf.chunk.js.map",
+    "index.html": "/Rick-Morty/index.html",
+    "precache-manifest.46d61737148cc624030a2506109fc11a.js": "/Rick-Morty/precache-manifest.46d61737148cc624030a2506109fc11a.js",
+    "service-worker.js": "/Rick-Morty/service-worker.js",
+    "static/css/main.24f31acb.chunk.css.map": "/Rick-Morty/static/css/main.24f31acb.chunk.css.map"
   }
 }
