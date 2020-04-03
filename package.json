@@ -1,6 +1,6 @@
 {
-  "homepage": "http://justyxxx.github.io/rick-morty-api",
-  "name": "rick-morty-api",
+  "homepage": "http://justyxxx.github.io/rick-morty",
+  "name": "rick-morty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -18,10 +18,8 @@ export class CardComp extends React.Component {
             className={classes.Cover}
           />
         }
-      >
         >
         <Meta
-          className={classes.Meta}
           avatar={
             <Avatar
               shape="square"

@@ -4,11 +4,10 @@ import classes from "./Detail.css";
 import { getLocale } from "../../utils/localization";
 
 const Detail = props => {
-  console.log(props);
-
+  const env = process.env.NODE_ENV === 'development';
   const detailData = (
     <>
-      <img src={props.img} alt="" />
+       <img src={props.img} alt={props.name} style={!env ? {marginLeft: '1rem'} : null}/>
       <div className={classes.Spec}>
         <h1>{getLocale(props.locale, "locale.navigation.Detail")}</h1>
         <h4>{getLocale(props.locale, "locale.navigation.Name")}:</h4>
