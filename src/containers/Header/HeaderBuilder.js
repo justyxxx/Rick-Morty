@@ -5,7 +5,7 @@ import * as actions from '../../store/actions';
 import {actionChangeUserLocale} from '../../store/reducers/locale';
 import Header from '../../components/Header/Header';
 
-const HeaderBuilder = props => {
+export const HeaderBuilder = props => {
 		console.log(props)
     const {currentPage, setCurrentPage, setCharacterId} = useContext(AppContext);
     const onChangePage = (next, prev) => {

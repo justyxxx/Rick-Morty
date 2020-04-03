@@ -10,6 +10,6 @@ const GenderGraph = () => (
             <GraphBuilder />
             <h4>This section displays the current List’s gender totals.</h4>
         </Col>      
-  </Row>
+    </Row>
 );
 export default GenderGraph

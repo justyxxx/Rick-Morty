@@ -2,7 +2,7 @@ import React , {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import Chart from '../../components/UI/Charts/ApexChart';
 
-const GraphBuilder = props => {
+export const GraphBuilder = props => {
     const [chartData, setChartData] = useState({
         options: {            
             plotOptions: {

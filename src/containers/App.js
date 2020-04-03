@@ -6,7 +6,7 @@ import AppContext from '../context/app-context';
 import Spinner from '../components/UI/Spinner/Spinner';
 import Layout from '../hoc/Layout/Layout';
 
-const App = props => {
+export const App = props => {
 
   useEffect(()=> {
     props.autoInitListHandler()
